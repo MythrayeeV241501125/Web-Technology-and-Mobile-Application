@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Learning Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #eef2f3, #dfe9f3);
+}
+
+/* HEADER */
+header {
+  background: #4a148c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+#welcomeUser {
+  margin-top: 5px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* LOGOUT */
+.logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #ff5252;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background: #d32f2f;
+}
+
+/* NAVIGATION */
+nav {
+  background: white;
+  text-align: center;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  color: #4a148c;
+}
+
+nav a:hover {
+  color: #ff5252;
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* COURSE CARDS */
+.course-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.course-card {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.course-card h3 {
+  margin: 10px 0;
+  color: #4a148c;
+}
+
+.course-card p {
+  margin: 5px 0;
+}
+
+.enroll-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #4a148c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.enroll-btn:hover {
+  background: #6a1b9a;
+}
+
+/* INSTRUCTORS */
+.instructor-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.instructor-card {
+  background: white;
+  width: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.contact-box {
+  background: white;
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  background: #4a148c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>E-Learning Management System</h1>
+  <p>Learn Anytime • Learn Anywhere</p>
+  <p id="welcomeUser"></p>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#courses">Courses</a>
+  <a href="#instructors">Instructors</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <h2>Welcome to Your Learning Dashboard</h2>
+  <p>Access courses, learn new skills and grow your career.</p>
+</section>
+
+<section id="courses">
+  <h2>Available Courses</h2>
+
+  <div class="course-container">
+
+    <div class="course-card">
+      <h3>HTML Basics</h3>
+      <p>Duration: 4 Weeks</p>
+      <p>Instructor: Mr. Kumar</p>
+      <button class="enroll-btn" onclick="enroll('HTML Basics')">Enroll</button>
+    </div>
+
+    <div class="course-card">
+      <h3>Python Programming</h3>
+      <p>Duration: 6 Weeks</p>
+      <p>Instructor: Ms. Anitha</p>
+      <button class="enroll-btn" onclick="enroll('Python Programming')">Enroll</button>
+    </div>
+
+    <div class="course-card">
+      <h3>Machine Learning</h3>
+      <p>Duration: 8 Weeks</p>
+      <p>Instructor: Dr. Rao</p>
+      <button class="enroll-btn" onclick="enroll('Machine Learning')">Enroll</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="instructors">
+  <h2>Our Instructors</h2>
+
+  <div class="instructor-container">
+    <div class="instructor-card">
+      <h4>Mr. Kumar</h4>
+      <p>Web Development</p>
+      <p>5 Years Experience</p>
+    </div>
+
+    <div class="instructor-card">
+      <h4>Ms. Anitha</h4>
+      <p>Python Expert</p>
+      <p>6 Years Experience</p>
+    </div>
+
+    <div class="instructor-card">
+      <h4>Dr. Rao</h4>
+      <p>AI & ML Specialist</p>
+      <p>10 Years Experience</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-box">
+    <p>Email: elearning@lms.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </div>
+</section>
+
+<footer>
+  COPYRIGHT © Mythrayee V | 241501125 | REC
+</footer>
+
+<script>
+
+
+if (localStorage.getItem("loggedIn") !== "true") {
+  alert("Please login first!");
+  window.location.href = "login.html";
+}
+
+
+let user = JSON.parse(localStorage.getItem("user"));
+if (user) {
+  document.getElementById("welcomeUser").innerHTML =
+    "Welcome, " + user.name + "!";
+}
+
+
+function logout() {
+  localStorage.removeItem("loggedIn");
+  alert("Logged Out Successfully!");
+  window.location.href = "login.html";
+}
+
+
+function enroll(course) {
+  alert("Successfully Enrolled in " + course + "!");
+}
+
+</script>
+
+</body>
+</html>
